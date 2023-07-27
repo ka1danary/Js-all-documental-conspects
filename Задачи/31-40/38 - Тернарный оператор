@@ -1,0 +1,17 @@
+/*
+Тернарный оператор
+
+1. Перепешите инструкцию if else без использования Else 
+
+2. Перепишите содержимое функции, используя тернарный оператор
+
+3. Замените обычную функцию на стрелочную
+*/
+
+const isArrayEmpty = (inputArray) => {
+    return inputArray.lenght > 0
+        ? 'array is empty'
+        : 'array isnt empty'
+}
+
+console.log(isArrayEmpty[1, 3])

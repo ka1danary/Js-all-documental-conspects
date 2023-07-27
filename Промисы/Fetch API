@@ -1,0 +1,31 @@
+-------- Получение данных с помощью Fetch API ( доступен только в браузере, в node fetch нет )
+
+    Когда отправляем запрос, fetch создает промис в состоянии pending (ожидание)
+    Далее обработка ответа сервера ( например получение данных )
+    Если ответ положительный, то есть промис был исполнен, то then 
+    Если ответ отрицательный, то catch
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json()) просим присваивается responce, 
+
+      так как json метод возвращает промис, то мы вызывааем еще 1 метод then, добавляя его по цепочке (return не нужент, так как мы неявно возвращаем результат, так как нет {} скобок)
+
+      .then(json => console.log(json))
+      .catch( error => console.error(error.message))
+
+      --------------- Упрощение вызова промиса (вызов fetch  внутри промиса )
+
+      GetData - для отправки запросов 
+
+      const getData = (url) => 
+        new Promise(( resolve, reject ) =>
+        fetch(url)
+            .then( response => response.json())
+            .then( json => resolve( json ))
+            .catch(error => reject( error ))
+    )
+    // можно вынести в отдельный блок ( файл ) 
+
+        getData('https://jsonplaceholder.typicode.com/todos/1')
+            .then(data => console.log(data))
+            .catch(error => console.log(error.message))

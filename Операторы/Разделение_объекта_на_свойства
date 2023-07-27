@@ -1,0 +1,13 @@
+Оператор разделения объекта на свойства ...
+
+    const button = {
+        wight : 100,
+        text : 'Buy'
+    }
+
+    const redButton = {
+        ...button,
+        color : 'red'
+    } // Добавили в новый объект с новыми свойствами
+
+    console.table(redButton) // Вывод в виде таблицы

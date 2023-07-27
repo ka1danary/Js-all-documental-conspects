@@ -1,0 +1,15 @@
+Map => перебор всех элементов, но создается новый массив по функции 
+
+    const myArray = [1, 2, 3]
+    const newArray = myArray.map( el => el * 3)
+    console.log(newArray) // 3 6 9
+
+Оригинальный массив не мутируется
+
+    const newArray = myArray.map( (el) => {
+        el * 3
+        }) // undefined undefined undefined
+
+    const newArray = myArray.map( (el) => {
+        return el * 3
+        }) // 3 6 9

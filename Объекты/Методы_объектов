@@ -1,0 +1,24 @@
+                    ~~Методы объектов~~
+
+МЕТОДЫ ОБЪЕКТОВ => свойство объектов, значение которого - Фукнция
+Доступ к методу через скобки после названия метода 
+
+const myCity = {
+    city : 'New York',
+    cityGreeting : function () {
+        console .log('Greetings!!')
+    }
+}
+
+myCity.cityGreeting()
+
+ДРУГАЯ ЗАПИСЬ:
+
+const myCity = {
+    city : 'New York',
+    cityGreeting () {
+        console .log('Greetings!!')
+    }
+}
+
+myCity.cityGreeting(

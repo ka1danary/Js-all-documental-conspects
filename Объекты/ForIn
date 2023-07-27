@@ -1,0 +1,19 @@
+for in
+
+for( key in Object) {
+    //Действия с каждым свойством объекта
+    // Значение свойства - Object[key]
+}
+
+const Object = {
+    x : 10,
+    y : true,
+    z : 'abc'
+}
+
+for(const key in Object) {
+    console.log(key, Object)
+}
+
+ДЛЯ ОБЪЕКТОВ ВСЕГДА ИСПОЛЬЗОВАТЬ FOR IN ЛИБО КОНВЕРТИРВАОТЬ ОБЪЕКТ
+В МАССИВ С ПОМОЩЬЮ Object.KEYS OBJECT.value И ИСПОЛЬЗОВАТЬ FOREACH

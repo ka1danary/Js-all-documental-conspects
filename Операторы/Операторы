@@ -1,0 +1,30 @@
+Операторы: 
+
+===  !== <= <=  сравнение
+= Присваивание
+&& || - return оператор, а не булевое значение 
+
+Текстовые операторы:
+    typeof тип значения 
+    console.log(typeof 10) // number 
+    console.log(typeof 10 === 'number') // true
+
+    instanceof принадлежность объекта тому или иному классу 
+    new 
+    delete  
+
+    typeof a 
+    new Object()
+    delete obj.a
+    a++
+    +a
+
+Ложные значение: 
+    Boolean( vlaue ) -> false 
+    (false, 0, '', undefined, null) - это все ложные значения 
+
+
+Трюк с оператором и вызовом функции 
+
+let b = 10
+b && console.log('Выполнено') // Выполнено

@@ -1,0 +1,30 @@
+Передача значения по ссылке
+Значение изменяется, потому что передается ссылка на объект в памяти пк
+    const person = {
+        name : 'Xenia',
+        age : 21
+    }
+
+    function incrementPersonAge(person) {
+        persone.age += 1
+        reeturn persone
+    }
+
+    console.log(incrementPersonAge(persone)) // persone.age = 22
+
+Но лучше при передаче внешних объектов (то есть ссылочных, создавать копии внутри функции, чтобы не было неправильной перезаписи)
+
+    const person = {
+        name : 'Bob',
+        age : 21
+    }
+
+    function incrementPersonAge(person) {
+        const updatePerson = {...person}
+        updatePerson.age += 1
+        return updatePerson
+    }
+
+    const updatePersonOne = incrementPersonAge(person)
+    console.log(updatePersonOne.age) // 22
+    console.log(person.age) // 21

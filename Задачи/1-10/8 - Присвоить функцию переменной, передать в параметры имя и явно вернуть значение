@@ -1,0 +1,10 @@
+/*
+Присвоить функцию переменной, передать в параметры имя и явно вернуть значение
+*/
+
+const anonimFunc = function (name) {
+   return 'Hello ' + name
+}
+
+console.log(anonimFunc('Xenia'))
+console.log(anonimFunc('Sergey'))

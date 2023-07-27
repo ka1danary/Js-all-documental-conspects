@@ -1,0 +1,33 @@
+Функции: - блок кода, который можно выполнять многократно 
+Функция - это объект
+ 
+    console.dir(myFn) // вывод всех свойст функции 
+
+    fuction myFn(a,b) {
+        let c
+        a = a + 1
+        c = a + b
+        return c
+    }
+
+    myFn(10, 3)
+
+return undefined если нет return в теле функции
+
+Функциональные выражения - всегда анонимные 
+
+    function(a,b) {
+        let c 
+        a =  +  1
+        c = a + b
+        nreturn c
+    }
+
+Присвоение анонимной функции к переменной 
+ 
+    const myFunction = function(a,b) {
+        let c 
+        a =  +  1
+        c = a + b
+        nreturn c
+    }

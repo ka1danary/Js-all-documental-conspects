@@ -1,0 +1,19 @@
+for of - перебор элементов, удобно для строк
+    const array = 'Xenia'
+
+    for( const letter of array) {
+        console.log(letter)
+    }
+    // X
+    // e
+    // n
+    // i
+    // a
+for of для массивов
+
+    const array = [true, 10, 'abc', null]
+
+    for(const element of array) {
+        console.log(element)
+    }
+// true 10 abc null

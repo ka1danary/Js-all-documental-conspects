@@ -1,0 +1,4 @@
+Вызов методов  
+
+    firstComment.upvote() 
+    console.log(firstComment.voteQty) // 1 

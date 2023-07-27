@@ -1,0 +1,11 @@
+/*
+Присваивать переменныым раные значения и выводить в консоль
+*/
+
+let isStudent
+
+isStudent = true
+console.log(isStudent)
+
+isStudent = false
+console.log(isStudent)

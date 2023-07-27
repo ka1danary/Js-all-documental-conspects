@@ -1,0 +1,11 @@
+const person = {
+    age : 20,
+    name : 'Xenia'
+}
+
+if(!person.name) {
+    console.log('имя не указано')
+}
+else {
+    console.log(`Возраст человека ${person.age}`)
+}

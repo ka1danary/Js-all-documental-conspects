@@ -1,0 +1,37 @@
+/*
+Сравнение двух массивов
+
+1. СОздайте фукнцию areArrayEqual c двумя параметрами firstArray and secondArray
+
+2. Верните true ecли два массива равны, а именно:
+    - имеют одинаковое кол-во элементтов 
+    - все элементы совпадают, например firstArray[0] === secondArray[0] и тд
+
+3. В противном случае верните false
+
+Важно! Исходите из того, что массивы содержат элементы примитивных типов 
+
+*/
+
+'use strict'
+
+const areArrayEqual = (firstArray, secondArray) => {
+    if (firstArray.length === secondArray.length) {
+        if (firstArray.every((element, index) => firstArray[index] === secondArray[index])) {
+            return 'Массивы идентичны'
+        }
+        return 'Массивы отличаются, но у них одинаковая длина '
+
+    }
+    return 'Массивы разные по длине'
+}
+
+const a = [1, 2, 3]
+const b = [1, 2, 3]
+
+console.log(a === b) // false потому что ссылочный тип отл ичается ссылками 
+
+const c = [2, 1, 3]
+const d = [1, 2, 3, 4]
+
+console.log(areArrayEqual(a, d))

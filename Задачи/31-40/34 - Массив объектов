@@ -1,0 +1,34 @@
+/*
+Массив объектов 
+
+Создайте массив с тремя объектами cars 
+Каждый объект содержит 3 свойства
+Добавить еще одни объект в массив 
+Вывести массив в консоль
+*/
+
+const newArray = [
+    {
+        carBrand: 'Toyota',
+        price: 10000,
+        isForSale: true
+    },
+    {
+        carBrand: 'Toyota',
+        price: 10000,
+        isForSale: true
+    },
+    {
+        carBrand: 'Toyota',
+        price: 10000,
+        isForSale: true
+    },
+]
+
+newArray.push({
+    carBrand: 'Toyota',
+    price: 10000,
+    isForSale: true
+})
+
+console.log(newArray)

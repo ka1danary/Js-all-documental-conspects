@@ -1,0 +1,20 @@
+---------- Переход с промисов на ASYNC / AWAIT с обработчиком ошибок 
+
+const getData = async (url) => { // передаем ссылку для запроса 
+    const res = await fetch(url) // ожидаем отклонения / принятие запроса и результат присваиваем новой переменной res 
+    const json = await res.json() // json тоже возвращает промис, так что тоже ожидаем откл / подтверждения от сервера
+    return json // возвращаем json 
+}
+
+// эта асинхронная функция вернет промис ( json )
+// если возникнет ошибка, то промис автоматически отклонится и функция вернет ошибку ( так как это ассинхронная функция )
+
+const url = 'https://jsonplaceholder.typicode.com/todos/1'
+
+try {
+    const data = await getData(url) // await будет работать только в брузере, иначе оборачиваем в асинхр функцию
+    console.log(data)
+}
+catch(error) {
+    console.log(error.message)
+}

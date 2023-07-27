@@ -1,0 +1,18 @@
+/*
+Присвоить переменным значения разных типов и с помощью typeof temp проверить тип
+*/
+
+
+let string = 'Xenia'
+let number = 10
+let bool = true
+let null1 = null // object 
+let und = undefined
+
+const Object1 = {} //object
+
+const a = [1, 2, 3] // object 
+
+console.log(typeof Object1)
+console.log(typeof a)
+console.log(typeof (und))

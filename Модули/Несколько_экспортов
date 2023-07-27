@@ -1,0 +1,16 @@
+несколько эспортов 
+-----------------------
+        export 
+const one = 1
+const two = 'two'
+
+export {one, two}
+------------------------
+        import 
+
+import {one, two} from './module.js'
+// Имена должны совпадать
+------------------------
+Чтобы поменять имена 
+
+import {one as oneRenamed, two} from './module.js'

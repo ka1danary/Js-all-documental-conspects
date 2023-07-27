@@ -1,0 +1,11 @@
+/*
+Конкатенация строк
+*/
+
+let name = 'Xenia'
+let secondName = 'Potega'
+let profession = 'Programmer'
+
+let concLine = 'My name is ' + name + ' ' + secondName + ' and i ' + profession
+
+console.log(concLine)

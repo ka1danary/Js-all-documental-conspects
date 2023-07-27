@@ -1,0 +1,35 @@
+Значение функции по умолчанию 
+
+    const multByfactor = (value, multiplier = 1 ) => {
+        return value * multiplier
+    }
+
+Более сложный пример 
+
+    const newPost = (post, addedAt = Date()) => ({
+        ...post,
+        addedAt
+    })
+
+    const firstPost = {
+        id : 1,
+        author : 'Xenia'
+    }
+
+    console.log(newPost(firstPost))
+
+Тот же пример, но уже с явным возвратом функции 
+
+    const newPost = (post, addedAdd = Date()) => {
+    return ({
+        ...post,
+        addedAdd
+    })
+}
+
+const Post = {
+    id: 1,
+    name: 'Xenia'
+}
+
+console.table(newPost(Post))

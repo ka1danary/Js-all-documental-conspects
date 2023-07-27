@@ -1,0 +1,30 @@
+/*
+Поиск объекта в массиве 
+
+1. Создайте функцию findPostById с двумя параметрами 
+    - Id поста
+    - массив постов
+
+2. Фцнкция должна вернуть пост с опрееленным ID 
+
+3. Если поста с опрделенным ID в массив постов нет, функция долна вернуть undefined
+
+4. Также внутри функции выведите в консоль ID Поста 
+*/
+
+
+/*
+array.find перебирает все элементы массива в клобэк функции, если не найдет то возвр undefined
+*/
+const post = [
+    { postId: 1, commentQuantity: 5 },
+    { postId: 2, commentQuantity: 10 },
+    { postId: 3, commentQuantity: 12 },
+    { postId: 4, commentQuantity: 18 },
+]
+
+const findPostById = (id, posts) => {
+    return post.find((post) => post.postId === id)
+}
+
+console.log(findPostById(2, post))

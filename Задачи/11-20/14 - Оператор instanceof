@@ -1,0 +1,22 @@
+/*
+1. Создайте переменную и присвойте ей любую строку
+
+2. Убедитесь, что значение этой перменной не является экземпляром String ( оператор instanceof)
+
+3. Убедитесь, что значение этой переменной имеет тип String
+
+4. Создайте другую переменную и ее значением должно быть значение первой переменной заглавными буквами
+*/
+
+const line = 'Hello World'
+const isNotTypeLine = (line instanceof String)
+
+console.log(isNotTypeLine)
+
+const isTypeLine = (typeof line)
+
+console.log(isTypeLine)
+
+const capsLine = line.toUpperCase()
+
+console.log(capsLine)

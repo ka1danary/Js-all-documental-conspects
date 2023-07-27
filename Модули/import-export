@@ -1,0 +1,16 @@
+МОДУЛИ import export
+
+----------------------
+        export 
+
+const name = () => {
+    console.log('Xenia')
+}
+
+export default name
+
+----------------------
+        import 
+
+import printName from './moduleOne.js'
+printName() // Название функции может отличаться при default export

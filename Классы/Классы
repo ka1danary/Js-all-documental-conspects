@@ -1,0 +1,79 @@
+Классы и прототипы - можно создавать прототипы для объектов 
+
+На основании прототипов создаются экземпляры объектов 
+Экземпляры могут иметь собственные свойства и методы 
+Экземпляры наследуют методы и свойства прототипов 
+
+class Comment {
+
+    constructor(text) {  // метод
+        this.text = text 
+        this.voteQty = 0
+    }
+    при вызове конструктора мы будем передавать значения для параметра text
+
+    upvote() { // функция 
+        this.voteQty += 1
+    }
+    upvote будет наследоваться всеми экземплярами класса
+}
+
+ this => переменная указывает на экземпляр класса, то есть обращение к конкретному созданному экземпляру 
+
+-------------------
+Создание нового экземпляра класса 
+
+cosnt firstComment = new Comment('First Comment')
+
+new вызывает фукнцию constructor, которая и создает новый экземпляр  ( объект )
+
+------------------------
+
+class Comment {
+    constructor(text) {
+        this.text = text
+        this.voteQty = 0
+    }
+
+    upVote() {
+        this.voteQty += 1
+    }
+}
+
+const firstComment = new Comment('First comment')
+console.log(firstComment)
+
+// Comment { text: 'First comment', voteQty: 0 } вывод в консоль
+
+----------
+Цепочка прототипов - Класс - комментарий - объект 
+То есть происходит наследование всех прототипов у экземпляра класса, а так как он объект, он наследует все методы объекта
+-----------
+InstanceOf - проверка пренадлежности экземпляра  к Объекту или классу 
+
+firstComment instanceof Comment // true 
+firstComment instanceof Object // true 
+
+-----------
+Вызов методов  
+
+    firstComment.upvote() 
+    console.log(firstComment.voteQty) // 1 
+
+--------------
+
+Проверка принадлежности свойств экземпляра у объекта hasOwnProperty ( метод объекта )
+
+    const firstComment = new Comment('First comment')
+    firstComment.hasChildNodes('text') // true
+    firstComment.hasChildNodes('upvote') // false
+
+------------
+
+Создание нескольких экземпляров 
+
+    const firstComment = new Comment('First comment')
+    const secondComment = new Comment('Second comment')
+    const thirdComment = new Comment('Third comment')
+
+------------

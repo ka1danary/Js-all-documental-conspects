@@ -1,0 +1,15 @@
+Деструктуризация объектов
+
+    const userProfile = {
+        name : 'Xenia',
+        number : 23,
+        hasSignedAgr : false
+    }
+
+    const { name, number } = userProfile 
+    const {hasSignedAgr} = userProfile
+
+    console.log(name) // Xenia
+
+Мы можем вытаскивать значения из объектов через {} и присваивать им значения
+Порядок следования неважен

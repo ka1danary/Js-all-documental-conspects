@@ -1,0 +1,15 @@
+/*
+Что будет выведено в консоль? Без запуска кода
+*/
+
+function fn() {
+    console.log('Hello function fn')
+
+    return function (a) {
+        console.log(a)
+    }
+}
+
+fn()(true)
+
+// -- Hello function fn \n\ true

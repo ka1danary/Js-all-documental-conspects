@@ -1,0 +1,17 @@
+/*
+Используя следующие фукции нужно вывести 5 сообщений с интревалом в 2 секунды
+
+setTimeout
+setInterval
+clearInterval
+
+*/
+
+let i = 1
+
+const newMessage = setInterval(() => {
+    console.log('Message # ' + i)
+    i++
+}, 2000)
+
+setTimeout(() => clearInterval(newMessage), 12000)

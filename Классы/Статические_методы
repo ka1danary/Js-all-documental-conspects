@@ -1,0 +1,19 @@
+Статические методы - методы, которые доступны как свойство класса и не наследуется экземплярами класса
+Доступны именно как методы для класса, но не для экземпляров
+        class Comment {
+        constructor(text) {
+            this.text = text
+            this.voteQty = 0
+        }
+
+        upVote() {
+            this.voteQty += 1
+        }
+
+        static mergeComment(first, second) { // статический метод 
+            return `${first} ${second}`
+        }
+    }
+
+    const firstComment = new Comment('First comment')
+    console.log(Comment.mergeComment('first', 'second')) // доступен только для класса 

@@ -1,0 +1,9 @@
+/*
+Создать перменную и присвоить ей любую строку 
+Вывести в консоль длину строки
+*/
+
+const line = 'Hello Xenia'
+const lineLenght = line.length
+
+console.log(lineLenght)

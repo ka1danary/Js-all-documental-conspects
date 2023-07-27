@@ -1,0 +1,62 @@
+----------  ASYNC / AWAIT - 
+Специальный синтаксис для упрощения работ с промисами 
+Асинхронная функция вместо результата всегда возвращает промис
+
+    const ayncFn = async () => {
+        // Всегда возвращает промис
+    }
+
+Пример: 
+    Cоздание промиса
+    const asyncFn = async () => {
+        return 'Success'
+    }
+    asyncFn()
+
+    то в случае успешного выполнения вернет промис из return 
+
+    Можем работать с таким промисом, как с обычным промисом
+    asyncFn()
+        .then( value => console.log(value))
+
+
+    Если поймали ошибку: 
+
+        const asyncFN = async () => {
+        throw new Error('There was an error')
+        }
+
+        asyncFN()
+            .then( value => console.log(value))
+            .catch(error => console.log(error.message))     // Промис будет автоматически отклонен с указанной ошибкой
+
+    ------ AWAIT 
+
+    Используется только в асинхронныхх функциях
+    Ключевое слово await заставит интерпретатор JavaScript ждать до тех пор, 
+    пока промис справа от await не выполнится. После чего оно вернёт его результат,
+     и выполнение кода продолжится.
+
+     То есть внутри ассинхронных функций можно ожидать результата промисов 
+
+     const asyncFN = async () => {
+        await <Promice>
+}
+
+    --------- Ожидание результата await
+
+        const timePromise = () => 
+         new Promise ( (resolve, reject ) => 
+        setTimeout( () => resolve(), 2000))
+
+        const asyncFn = async () => {
+            console.log('Start')
+            const startTime = performance.now() // Начало отсчета
+            await timePromise() // функция не выполняется, пока не придет результат промиса ( положительный / отклонен )
+            const endTime = performance.now()
+            console.log('End', endTime - startTime) // полученное время выполнения 
+        }
+
+        asyncFn()
+
+       

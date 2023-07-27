@@ -1,0 +1,45 @@
+/*
+Проверка сортировки массива
+
+1. Создайте функцию arraySortInfo с одним параметром inputArray
+
+2. Если хотя бы один элемент в массиве не является числом - вернуть инфу об этом 
+
+3. Если числа в массиве отсортированы по возрастанию, вернуть инфу 
+
+4. Если числа в массиве отсортировны по убыванию, вернуть инфу об этом 
+
+5. Если массив не отсортирован, вернуть массив не отсортирован 
+
+Использовать метод array.every( (element, index) => ) return true (if all elements === true) / false
+Метод every() проверяет, удовлетворяют ли все элементы массива условию, 
+заданному в передаваемой функции.
+
+array.find( () => )
+
+*/
+
+const a = [5, 'abc', 10, 1]
+const b = [4, 10, 14, 25, 25, 50]
+const c = [150, 132, 80, 40]
+const d = [15, 26, 10, 23, 85]
+
+const even = (element) => typeof element === String
+
+const arraySortInfo = (inputArray) => {
+    if (inputArray.find((element) => typeof element != 'number')) {
+        return 'Некоторые элементы не являются числами'
+    }
+
+    if (inputArray.every((element, index) => index > 0 ? element >= inputArray[index - 1] : true)) {
+        return 'Массив отсортирован по возрастанию'
+    }
+
+    if (inputArray.every((element, index) => index > 0 ? element <= inputArray[index - 1] : true)) {
+        return 'Массив отсортирован по убыванию'
+    }
+
+    return 'Массив не отсортирован'
+}
+
+console.log(arraySortInfo(d))

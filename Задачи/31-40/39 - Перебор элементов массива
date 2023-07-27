@@ -1,0 +1,21 @@
+/*
+Перебор элементов массива
+
+1. Создайте функцию Cityinfo c двумя параментрами, которая возвращает строку
+'London is the index 0 in the array'
+
+2. Переберите все элементы массива myCityes
+для каждого жлемента вызовите функцию cityInfo и выведите в консоль результат вызова функции 
+*/
+
+const myCityes = ['London', 'New York', 'Singapore']
+
+const CityInfo = (element, i) => {
+    return `${element} is the index ${i} in the array`
+}
+
+let counter = 0
+myCityes.forEach(el => {
+    console.log(CityInfo(el, counter))
+    counter++
+})

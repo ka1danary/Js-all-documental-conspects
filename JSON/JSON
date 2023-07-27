@@ -1,0 +1,28 @@
+                    ~~JSON~~
+                    
+JSON: ( JAVA SCRIPT NOTATION ) => формат обмена данными между пк в сети 
+Передача происходит через строку, то есть JSON - это строка
+
+Конвертирования JS объекта в JSON объект (или наоборот) => Парсинг 
+    JSON.parse()        // JSON => JS object
+    JSON.stringify()    // JS object => JSON
+
+Пример перевода: 
+    const myCity = {
+        city : 'New York',
+        name : 'Xenia',
+        cityGreeting : function () {
+            console .log('Greetings!!')
+        }
+    }
+
+    // Object => JSON
+
+    console.log(JSON.stringify(myCity))
+    const myCItyString = JSON.stringify(myCity)
+    console.log(myCItyString)
+
+    //JSON => Object
+
+    const myCityParse = JSON.parse(myCItyString)
+    globalThis.console.log(myCityParse)

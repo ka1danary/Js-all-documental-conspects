@@ -1,0 +1,8 @@
+Деструктуризация массивов
+
+    const fruits = ['Apple', 3]
+    const [fruitOne, number] = fruits
+
+    console.log(fruitOne)
+
+Важен порядок следования элементов, указываем переменные в нужнм порядке 

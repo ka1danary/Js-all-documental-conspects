@@ -1,0 +1,23 @@
+/*
+Поиск элементов примитивных типов в массиве
+
+1. СОздайте функцию isElementInArray c двумя пармаетрами inputArray searcElement
+
+2. Если searcElement найден в inputArray - Вернуть true
+
+3. В противном случае вернуть false
+
+*/
+
+const transport = ['Bus', 'Car', 'Bicycle', 'Airplane']
+
+const isElementInArray = (inputArray, searchElement) => {
+    if (inputArray.find((elementArray) => searchElement === elementArray)) {
+        return true
+    }
+    return false
+}
+
+console.log(isElementInArray(transport, 'jjdskdj'))
+console.log(isElementInArray(transport, 'Bus'))
+console.log(isElementInArray(transport, 'Airplane'))

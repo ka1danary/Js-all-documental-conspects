@@ -1,0 +1,11 @@
+/*Задача: Колбэк функция 
+Вывести в консоль Привет мир с задержкой в 5 секунд
+*/
+
+const newFunc = () => {
+    return setTimeout(() => console.log('hello, world'), 5000)
+}
+
+const res = newFunc()
+
+console.log(res)

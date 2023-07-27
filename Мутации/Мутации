@@ -1,0 +1,22 @@
+                    ~~Мутации~~
+
+Мутация в JS: => 
+
+В примитивных типах копирование из одной переменной в другую 
+    происходит по значению (то есть просто копируем значение)
+
+Копирование объекта (копирование ссылочного типа):
+     МУТИРОВАНИЕ КОПИЙ (COPY BY REFERENCE)
+
+    const person = {
+        name : 'Bob',
+        age : 25
+    }
+
+    const person2 = person // копирует только ссылку на объект
+
+    person2.age = 30
+    person2.isAdult = true
+
+    console.log(person.age) // 30
+    console.log(persone.isAdult)

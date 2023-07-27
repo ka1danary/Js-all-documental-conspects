@@ -1,0 +1,16 @@
+forEach для объектов 
+// Object.keys - можно получить все ключи объекта в виде массива 
+// Object.values - получаем все значения объекта в виде массива 
+
+const newObject = {
+    x : 10,
+    y : true,
+    z : 'abc'
+}
+
+Object.keys(newObject).forEach(key => {
+    console.log(key, newObject[key])
+})  
+
+Object.keys({name : 'Xenia'}) // name  
+Object.values({name : 'Xenia'}) // 'Xenia'

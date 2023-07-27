@@ -1,0 +1,16 @@
+Деструктуризация параметров в функциях 
+
+const userProfile = {
+    name : 'Xenia',
+    comments : 14,
+    hasRegister : false
+}
+
+const userInfo = ( {name, comments} ) => {
+    if(!comments) {
+        return `User ${name} has no comments`
+    }
+    return `User ${name} has ${comments} comments`
+}
+
+console.log(userInfo(userProfile))

@@ -1,0 +1,17 @@
+/*
+Создание объекта
+Создайте объект с тремы свойствами:
+    -name
+    -surname
+    -favoriteNumber
+
+Вывести в консоль строку 'My name is <name> <surname> and my favorite number is <favoriteNumber>'
+*/
+
+const myProfile = {
+    name: 'Xenia',
+    surname: 'Potega',
+    favoriteNumber: 22
+}
+
+console.log(`My name is ${myProfile.name} ${myProfile.surname} and my favorite number is ${myProfile.favoriteNumber}`)

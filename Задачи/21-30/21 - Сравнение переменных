@@ -1,0 +1,17 @@
+/*
+Сравнение переменных 
+
+1. Сравните две переменные "myVariable" и "myVariable2"
+2. Выведите в консоль true, если первая переменная больше второй 
+3. Преобразуйте обе переменные в числа перед сравнением 
+*/
+
+let number1 = '10'
+let number2 = '20'
+
+number1 = Number(number1)
+number2 = parseInt(number2)
+
+if (number1 <= number2) {
+    console.log(true)
+}

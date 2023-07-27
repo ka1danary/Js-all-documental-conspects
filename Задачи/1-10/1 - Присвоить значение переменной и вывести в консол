@@ -1,0 +1,7 @@
+/* 
+Присвоить значение переменной и вывести в консоль
+*/
+
+const myCountry = 'Russia'
+
+console.log(myCountry)

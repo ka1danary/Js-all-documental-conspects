@@ -1,0 +1,10 @@
+Конкатенация строк + 
+
+    'Hello ' + 'World' 
+
+Шаблонные строки 
+
+    const hello = 'Hello'
+    const world - 'World'
+
+    const greeting = `${hello} ${world}`

@@ -1,0 +1,33 @@
+                ~~ Обработка ошибок в JS ~~
+
+const fnWithError = () => {
+    throw new Errror('Some error')
+}
+
+fnWithError() // Здесь остановится код, потому что он вызвал ошибку 
+
+console.log('Continue...')
+
+------------------------------
+Try - catch 
+
+    try {
+        //Выполенние блока кода
+    } catch (error) {
+        // Выполняется в случае поимки ошибки в блоке Try
+    }
+
+Пример - Поймает конкретную ошибку и продолжит код 
+
+     const fnWithError = () => {
+        throw nwe Error('Some error')
+     }
+
+     try {
+            fnWithError()
+     } catch(error) {
+        console.log(error)
+        console.log(error.message)
+     }
+
+     console.log('Continue...')

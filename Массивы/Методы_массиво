@@ -1,0 +1,13 @@
+Методы массивов
+
+Push => добавляет элемент в конец массива
+    myArray.push(4) 
+
+Pop => удаляет элемент из массива и возвращает его 
+    const removedElement = myArray.pop()
+
+unsshift => добавление элемента в начало массива 
+    myArray.unsshift('abc')
+
+shift => удаление элемента в начале массива
+    const removedElement = myArray.shift()

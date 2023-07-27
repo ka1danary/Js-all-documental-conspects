@@ -1,0 +1,35 @@
+/*
+Случайные числа
+
+1. Сгенерировать новое 4-значное число
+2.Убедиться, что это новое число не совпадает ни с одним числом в массиве array.includes
+3. Если совпадает, нужно сгененрировать новое 4-значное число
+4. Если совпадений нет, добавить его в массив myNumber 
+*/
+
+//Math,floor - округляет число ( для интервала )
+'use strict'
+
+const MIN = 1000
+const MAX = 10000
+
+const myNumber = [2355, 7235, 8135, 1762, 2361, 8351]
+
+const randomNumberGenerator = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+const addRandomNumberToArray = (arr, min, max) => {
+    let newRandomNumber
+    const updatedArr = [...arr] // Копия массива
+
+    do {
+        newRandomNumber = randomNumberGenerator(min, max)
+    } while (updatedArr.includes(newRandomNumber))
+
+    updatedArr.push(newRandomNumber)
+    return updatedArr
+}
+
+const updatedArr = addRandomNumberToArray(myNumber, MIN, MAX)
+console.log(updatedArr)

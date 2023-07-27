@@ -1,0 +1,33 @@
+/*
+Конвертация JSON => JS объекты
+
+1. Конвертируйте массив JSON объектов в массив объектов JS 
+2. Выведите в консоль результатирующий массив 
+3. Выведите в консоль PostId второго объекта 
+4. Выведите в консоль commentsQuantity последнего объекта
+*/
+
+const postJSON = [
+    '{"postId" : 1340, "commentQuantity" : 5}',
+    '{"postId" : 1355, "commentQuantity" : 13}',
+    '{"postId" : 1360, "commentQuantity" : 20}',
+    '{"postId" : 1399, "commentQuantity" : 100}'
+]
+
+// JSON.parse or JSON.stringify не буду работать, потому что вложенные объекты
+
+// так как это массиив, используем для перебора метод map
+
+// 1-2 задание
+const postJS = postJSON.map((post) => { //результат запишется в новый объект postJS
+    return JSON.parse(post)
+})
+
+console.log(postJS)
+
+// 3 задание
+console.log(postJS[1].postId)
+
+// 4 задание
+
+console.log(postJS[postJS.length - 1].commentQuantity)

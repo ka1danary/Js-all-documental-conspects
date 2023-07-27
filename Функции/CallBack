@@ -1,0 +1,17 @@
+CallBack - функция - в одной функции идет вызов другой функции 
+
+    fuction anotherFuncion() {
+
+    }
+    function fnWithCallback(CallBackFunction) {
+        CallBackFunction()
+    }
+    fnWithCallback(anotherFuncion)
+Пример: 
+
+    const printMyName = () => {
+        console.log('Bogdan')
+    }
+
+    console.log('Start...')
+    setTimeout(printMyName, 1000) // задержка функции 1000мс, передача функции в качестве аргумента

@@ -1,0 +1,15 @@
+/*
+Добавление элементов в начало массива 
+- сначала строку Привет
+-потом число 100
+
+Вывести длину результатирующего массива
+*/
+
+const myArray = [true, null]
+myArray.unshift('Hello')
+myArray.unshift(10)
+
+const lenghtArray = myArray.length
+
+console.log(lenghtArray)
